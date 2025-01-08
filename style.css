@@ -1,0 +1,187 @@
+/* Общие стили */
+body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Высота на весь экран */
+}
+
+/* Основной контейнер */
+.container {
+  display: flex;
+  justify-content: space-between; /* Элементы распределяются слева и справа */
+  width: 80%; /* Ширина контейнера */
+  gap: 0px; /* Отступ между секциями */
+}
+
+/* Левая часть */
+.left-section {
+  display: flex;
+  flex-direction: column; /* Располагаем элементы вертикально */
+  gap: 20px; /* Расстояние между текстом и рамкой */
+  width: 50%; /* Задаем ширину левой части */
+}
+
+/* Текст в шапке */
+.header {
+  text-align: left; /* Центрируем содержимое */
+  max-width: 500px; /* Ограничиваем максимальную ширину заголовка и текста */
+  margin: 0 auto; /* Центрируем контейнер */
+  padding: 0 20px; /* Добавляем отступы по бокам */
+}
+
+.header h1 {
+  position: relative;
+  top: 100px;
+  left: 80px;
+  font-size: 28px;
+  color: #1f314f;
+  margin-bottom: 10px;
+
+}
+
+.header p {
+  text-align: center;
+  position: relative;
+  top: 100px;
+  left: -40px;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Рамка с QR-кодом */
+.laptop-frame {
+  position: absolute;
+  bottom: 0;
+  border: 20px solid #000; /* Черная рамка */
+  border-radius: 15px; /* Скругленные углы */
+  width: 100%; /* Растягиваем по ширине контейнера */
+  max-width: 500px; /* Ограничиваем максимальную ширину */
+  height: 300px; /* Высота рамки */
+  background-color: #eaf1fc; /* Цвет внутри рамки */
+  display: flex;
+  justify-content: center; /* Центрируем содержимое */
+  align-items: center;
+}
+
+/* Внутри рамки */
+.screen {
+  background-color: #eaf1fc;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* Контейнер для QR-кода */
+.qr-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100px;
+  height: 200px;
+}
+
+.qr-code {
+  width: 100px;
+  height: 100px;
+}
+.qr-text {
+  text-align: center; /* Выравнивание текста по центру */
+  margin-top: 20px; /* Отступ сверху от QR-кода */
+}
+
+.qr-text h2 {
+  font-size: 8px; /* Размер заголовка */
+  color: hsl(218, 44%, 22%); /* Темно-синий цвет */
+  margin: 0; /* Убираем отступы */
+  font-weight: 700; /* Жирный текст */
+}
+
+.qr-text p {
+  font-size: 6px; /* Размер текста */
+  color: hsl(216, 15%, 48%); /* Серый цвет */
+  margin: 10px 0 0; /* Отступ сверху, снизу нет */
+  line-height: 1.6; /* Высота строки для читаемости */
+}
+
+/* Правая часть */
+.right-section {
+  display: flex;
+  flex-direction: column; /* Карточки идут вертикально */
+  gap: 100px; /* Расстояние между карточками */
+  width: 40%; /* Ширина правой части */
+}
+
+/* Карточки */
+.info-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 100%; /* Ограничиваем ширину карточек */
+}
+
+.info-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+.icon {
+  position: absolute;
+  left: 80px;
+  top: 70px;
+  width: 180px; /* Ширина изображения */
+  height: 160px; /* Высота изображения */
+  border-radius: 100%; /* Сделать изображение круглым (опционально) */
+  box-shadow: px px px rgba(0, 0, 0, 0.1);
+}
+
+/* Новый контейнер */
+.background-container {
+  position: absolute; /* Размещаем контейнер абсолютно */
+  bottom: -9px; /* Прижимаем к нижней части экрана */
+  left: 120px; /* Прижимаем к левому краю */
+  width: 600px; /* На всю ширину страницы */
+  height: 600px; /* Высота нового контейнера */
+  background-color: #ffffff; /* Светло-голубой фон */
+  z-index: -7; /* Размещаем ниже всех остальных элементов */
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Текст внутри нового контейнера */
+.background-container p {
+  font-size: 16px;
+  color: #1f314f; /* Темно-синий текст */
+}
+
+.icon-atom {
+  position: absolute; /* Позволяет иконке перемещаться независимо */
+  bottom: 450px; /* Позиция сверху */
+  right: 650px; /* Позиция слева */
+  width: 40px; /* Размер иконки */
+  height: 40px;
+}
+
+.icon-layout {
+  position: absolute; /* Позволяет иконке перемещаться независимо */
+  bottom: 250px; /* Позиция снизу */
+  right: 650px; /* Позиция справа */
+  width: 40px; /* Размер иконки */
+  height: 40px;
+}
+
